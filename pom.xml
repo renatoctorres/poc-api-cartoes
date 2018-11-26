@@ -51,11 +51,7 @@
 			<artifactId>camel-spring</artifactId>
 			<version>2.22.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-core</artifactId>
-			<version>2.22.1</version>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-jackson</artifactId>
@@ -72,17 +68,11 @@
 			<artifactId>camel-cxf</artifactId>
 			<version>2.22.1</version>
 		</dependency>
+		
 		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-test</artifactId>
-			<version>2.22.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-test-spring</artifactId>
-			<version>2.22.1</version>
-			<scope>test</scope>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.7</version>
 		</dependency>
 	</dependencies>
 
