@@ -5,10 +5,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 @SpringBootApplication
-@PropertySource("classpath:application.properties")
+@ComponentScan("com.apicartoes")
+@Configuration
 public class PocApiCartoesApplication {
 
 	public static void main(String[] args) {
@@ -17,7 +19,7 @@ public class PocApiCartoesApplication {
 	
 	@Bean
 	public ServletRegistrationBean camelServletRegistrationBean() {
-		ServletRegistrationBean registration = new ServletRegistrationBean(new CamelHttpTransportServlet());
+		ServletRegistrationBean registration = new ServletRegistrationBean(new CamelHttpTransportServlet(),"/api/*");
 		registration.setName("CamelServlet");
 		return registration;
 	}
